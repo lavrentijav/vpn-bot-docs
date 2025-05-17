@@ -2,76 +2,170 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>VPN‑протоколы и клиенты</title>
+  <title>Документация по VPN-протоколам и клиентам</title>
   <style>
-    body{font-family:system-ui,Arial,sans-serif;max-width:920px;margin:auto;padding:24px;line-height:1.5;}
-    h1{color:#219653}
-    table{width:100%;border-collapse:collapse;margin-top:16px}
-    th,td{border:1px solid #ccc;padding:8px;text-align:left}
-    th{background:#e8f5e9}
-    code{background:#f2f2f2;padding:2px 4px;border-radius:4px}
-    a{color:#1976d2;text-decoration:none}
-    a:hover{text-decoration:underline}
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      max-width: 920px;
+      margin: auto;
+      padding: 24px;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #219653;
+      margin-top: 32px;
+    }
+    h1 {
+      border-bottom: 2px solid #219653;
+      padding-bottom: 8px;
+    }
+    p {
+      margin: 12px 0;
+    }
+    ul {
+      margin: 12px 0 24px 20px;
+    }
+    a {
+      color: #1976d2;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #f2f2f2;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    img.screenshot {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin: 12px 0;
+      border-radius: 6px;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 48px 0;
+    }
   </style>
 </head>
 <body>
-  <h1>Справка по поддерживаемым протоколам</h1>
+  <h1>Документация по VPN-протоколам и подключению клиентов</h1>
 
-  <p>Страница содержит краткую информацию о доступных протоколах, клиентских
-     приложениях и ссылках на инструкции.</p>
+  <p>Здесь представлены инструкции по настройке популярных VPN-протоколов и подключению через рекомендованные клиентские приложения.</p>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Протокол</th>
-        <th>Описание / особенности</th>
-        <th>Рекомендуемые клиенты</th>
-      </tr>
-    </thead>
-    <tbody>
+  <hr />
 
-      <!-- VLESS -->
-      <tr>
-        <td><strong>VLESS</strong></td>
-        <td>Современный и быстрый протокол Xray.</td>
-        <td>
-          Android — <a href="https://nekobox.lostb.de" target="_blank">Nekobox</a><br>
-          iOS / macOS — <a href="https://apps.apple.com/app/id6449439025" target="_blank">Foxray</a><br>
-          Windows — <a href="https://github.com/The-Invisible-Man-Project/InvisibleMan-Xray/releases" target="_blank">Invisible Man Xray</a>
-        </td>
-      </tr>
+  <h2>VLESS</h2>
+  <h3>Описание</h3>
+  <p>Современный и быстрый протокол Xray, обеспечивающий высокую скорость и надежность.</p>
 
-      <!-- Shadowsocks -->
-      <tr>
-        <td><strong>Shadowsocks</strong></td>
-        <td>Лёгкий SOCKS5‑прокси с шифрованием, простая настройка. Часто доступен для настройки в разных приложениях</td>
-        <td>
-          Android — <a href="https://nekobox.lostb.de" target="_blank">Nekobox</a><br>
-          iOS / macOS — Shadowrocket (App Store)<br>
-          Windows — <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">Shadowsocks‑Win</a>
-        </td>
-      </tr>
+  <h3>Рекомендуемые клиенты и инструкция подключения</h3>
 
-      <!-- Outline -->
-      <tr>
-        <td><strong>Outline</strong></td>
-        <td>Полное решение от Jigsaw с собственным сервером и приложениями.</td>
-        <td><a href="https://getoutline.org/ru/home" target="_blank">Outline Client (все платформы)</a></td>
-      </tr>
+  <h4>Android — Nekobox</h4>
+  <ol>
+    <li>Установите приложение с сайта: <a href="https://nekobox.lostb.de" target="_blank">Nekobox</a>.</li>
+    <li>Запустите Nekobox и нажмите <em>«Добавить профиль»</em>.</li>
+    <li>Выберите тип подключения <strong>VLESS</strong>.</li>
+    <li>Введите адрес сервера, порт, UUID и другие параметры, предоставленные администратором.</li>
+    <li>Сохраните профиль и подключитесь.</li>
+  </ol>
+  <!-- Пример вставки скриншотов: -->
+  <!-- <img src="nekobox_add_profile.png" alt="Добавление профиля в Nekobox" class="screenshot" /> -->
+  <!-- <img src="nekobox_vless_settings.png" alt="Настройка VLESS в Nekobox" class="screenshot" /> -->
 
-      <!-- HTTP -->
-      <tr>
-        <td><strong>HTTP‑proxy</strong></td>
-        <td>Обычный нешифрованный HTTP‑прокси, подходит лишь для базовых задач. Часто доступен для настройки в разных приложениях</td>
-        <td>Android — <a href="https://play.google.com/store/apps/details?id=org.proxydroid" target="_blank">ProxyDroid</a></td>
-      </tr>
+  <h4>iOS / macOS — Foxray</h4>
+  <ol>
+    <li>Скачайте Foxray из App Store: <a href="https://apps.apple.com/app/id6449439025" target="_blank">Foxray</a>.</li>
+    <li>Откройте приложение и нажмите на "+" для добавления новой конфигурации.</li>
+    <li>Выберите тип подключения <strong>VLESS</strong>.</li>
+    <li>Введите данные сервера (адрес, порт, UUID и другие параметры).</li>
+    <li>Сохраните и подключитесь.</li>
+  </ol>
+  <!-- <img src="foxray_add_vless.png" alt="Добавление VLESS профиля в Foxray" class="screenshot" /> -->
 
-    </tbody>
-  </table>
+  <h4>Windows — Invisible Man Xray</h4>
+  <ol>
+    <li>Скачайте последнюю версию с GitHub: <a href="https://github.com/The-Invisible-Man-Project/InvisibleMan-Xray/releases" target="_blank">Invisible Man Xray</a>.</li>
+    <li>Распакуйте архив и запустите программу.</li>
+    <li>Нажмите <em>«Добавить профиль»</em> → выберите <strong>VLESS</strong>.</li>
+    <li>Введите параметры подключения.</li>
+    <li>Сохраните и нажмите <em>«Подключиться»</em>.</li>
+  </ol>
+  <!-- <img src="invisibleman_add_profile.png" alt="Добавление профиля в Invisible Man Xray" class="screenshot" /> -->
 
-  <p style="margin-top:24px;font-size:0.9em;color:#777">
+  <hr />
+
+  <h2>Shadowsocks</h2>
+  <h3>Описание</h3>
+  <p>Легкий SOCKS5-прокси с шифрованием. Простая настройка, поддерживается множеством клиентов.</p>
+
+  <h3>Рекомендуемые клиенты и инструкция подключения</h3>
+
+  <h4>Android — Nekobox</h4>
+  <p>Шаги аналогичны подключению VLESS, просто выберите тип протокола <strong>Shadowsocks</strong>.</p>
+
+  <h4>iOS / macOS — Shadowrocket</h4>
+  <ol>
+    <li>Скачайте приложение Shadowrocket из App Store.</li>
+    <li>Откройте приложение и добавьте новый сервер.</li>
+    <li>Выберите тип <strong>Shadowsocks</strong>.</li>
+    <li>Введите параметры (сервер, порт, пароль, метод шифрования).</li>
+    <li>Сохраните и подключитесь.</li>
+  </ol>
+  <!-- <img src="shadowrocket_add_ss.png" alt="Добавление Shadowsocks профиля в Shadowrocket" class="screenshot" /> -->
+
+  <h4>Windows — Shadowsocks‑Win</h4>
+  <ol>
+    <li>Скачайте клиент с GitHub: <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank">Shadowsocks‑Win</a>.</li>
+    <li>Запустите программу.</li>
+    <li>В настройках добавьте новый профиль Shadowsocks с параметрами сервера.</li>
+    <li>Сохраните и включите прокси.</li>
+  </ol>
+  <!-- <img src="shadowsocks_win_add_profile.png" alt="Добавление профиля в Shadowsocks-Win" class="screenshot" /> -->
+
+  <hr />
+
+  <h2>Outline</h2>
+  <h3>Описание</h3>
+  <p>Полное решение от Jigsaw с собственным сервером и приложениями, простое в использовании.</p>
+
+  <h3>Инструкция</h3>
+  <ol>
+    <li>Перейдите на сайт: <a href="https://getoutline.org/ru/home" target="_blank">https://getoutline.org/ru/home</a>.</li>
+    <li>Скачайте и установите Outline Client для вашей платформы.</li>
+    <li>Получите доступ к серверу через Outline Manager или ссылку от администратора.</li>
+    <li>Импортируйте ключ сервера в клиент.</li>
+    <li>Подключитесь и пользуйтесь VPN.</li>
+  </ol>
+  <!-- <img src="outline_import_key.png" alt="Импорт ключа в Outline" class="screenshot" /> -->
+
+  <hr />
+
+  <h2>HTTP-прокси</h2>
+  <h3>Описание</h3>
+  <p>Простой нешифрованный HTTP-прокси для базовых задач.</p>
+
+  <h3>Клиенты и инструкция</h3>
+
+  <h4>Android — ProxyDroid</h4>
+  <ol>
+    <li>Установите ProxyDroid из Google Play: <a href="https://play.google.com/store/apps/details?id=org.proxydroid" target="_blank">ProxyDroid</a>.</li>
+    <li>Запустите приложение.</li>
+    <li>Введите адрес и порт HTTP-прокси.</li>
+    <li>Включите прокси и настройте фильтрацию приложений, если нужно.</li>
+  </ol>
+  <!-- <img src="proxydroid_settings.png" alt="Настройки ProxyDroid" class="screenshot" /> -->
+
+  <hr />
+
+  <p style="margin-top: 48px; font-size: 0.9em; color: #777;">
     Обновлено: <span id="date"></span>
-    <script>document.getElementById('date').textContent = new Date().toISOString().slice(0,10);</script>
+    <script>document.getElementById('date').textContent = new Date().toISOString().slice(0, 10);</script>
   </p>
 </body>
 </html>
